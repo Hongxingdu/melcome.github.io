@@ -1,0 +1,16 @@
+links:
+- name: Home
+  link: /
+- name: Design
+  link: /design/
+- name: Print
+  link: /print/
+- name: Sign
+  link: /sign/
+- name: Portfolio
+  link: /portfolio/
+
+- name: About
+  link: /about/
+- name: Contact
+  link: /contact/
