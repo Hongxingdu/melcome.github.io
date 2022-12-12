@@ -1,5 +1,7 @@
 ---
-title: Home
+title: Contact
+heading: Get in touch today
+subtitle: We'd love to help your business.
 map:
   latitude: -37.7586403
   longitude: 175.2439891
@@ -7,70 +9,32 @@ map:
   zoom: 13
 ---
 
-<section class="hero diagonal">
+<section class="diagonal">
 	<div class="container">
-		<h2 class="editable">Melcome design & print</h2>
-		<p class="subtext editable">One stop for all your design, printing and signwriting requirements </p>
-		<p><a class="button alt" href="{{ site.baseurl }}/contact/">Contact Us</a></p>
-	</div>
-</section>
+		<form action="{{ site.baseurl }}/contact-success/" method="post" class="contact-form">
+			<input type="hidden" name="_to" value="info@melcome.co.nz" />
+			<input type="text" name="_gotcha" style="display: none;" />
 
-<section class="diagonal patterned">
-	<div class="container halves">
-		<div>
-			<h3 class="editable">Some of our work</h3>
-			<p class="editable">We take pride in our previous work and our happy customers. We cater to any sector to boost business and increase exposure.</p>
-			<p class="editable"><a href="{{ site.baseurl }}/portfolio/">View Full Portfolio &rarr;</a></p>
-		</div>
-		<div>
-			<ul class="image-grid">
-				{% for client in site.clients limit: 4 %}
-					<li><a href="{{ site.baseurl }}{{ client.url }}"><img src="{% include relative-src.html src=client.image_path %}" /></a></li>
-				{% endfor %}
-			</ul>
-		</div>
-	</div>
-</section>
+			<div class="halves">
+				<div>
+					<label for="name">First Name</label>
+					<input type="text" name="first-name" id="first-name" placeholder="John" />
+				</div>
 
-<section class="diagonal alternate">
-	<div class="container halves">
-		<div>
-			<ul class="image-list">
-				<li><img src="{{ site.baseurl }}/images/2617.jpeg" width="360" style="margin-bottom: 40px;" /></li>
-				<li><img src="{{ site.baseurl }}/images/2973.jpeg" width="360" /></li>
-			</ul>
-		</div>
-		<div>
-			<h3 class="editable">Melcome can do more...            
-</h3>
-			<p class="editable">
-			  <ul>
-			  <li> In-house graphic designs for business cards, menus, signs, vehicle graphics, company logos, and images. </li>
+				<div>
+					<label for="name">Last Name</label>
+					<input type="text" name="last-name" id="last-name" placeholder="Doe" />
+				</div>
+			</div>
 
-<li>Sign panels for shops in the malls, on building exteriors, and etc. </li>
+			<label for="email">Email Address</label>
+			<input type="email" name="email" id="email" placeholder="john@example.com" required />
 
-<li>Signwriting on indoor and outdoor windows, and menus on the walls. </li>
+			<label for="message">Message</label>
+			<textarea name="message" id="message" placeholder="Hi There..."></textarea>
 
- <li> Vehicle cover signage, includes lettering, graphics, and full body wraps </li>
-
- <li> Illuminated signs, includes light boxes, and 3D lettering, backlit signage, and freestanding     signage </li>
-
- <li> Vinyl lettering </li>
-
- <li> Business cards </li>
-
- <li> Screen printing includes printing on gifts such as mugs, tiles and etc. </li>
-
- <li> Digital printing </li>
-
- <li> Banners </li>
-
- <li> Garment printing includes printing on sports uniforms and corporate clothing </li>
-
- <li> Indoor and outdoor wall decoration products  </li> 
-</ul>
-</p>
-		</div>
+			<input type="submit" value="Send Message" />
+		</form>
 	</div>
 </section>
 
@@ -85,7 +49,6 @@ map:
 				<address><a target="_blank" href="https://www.google.com/maps/place/{{ page.map.address | url_encode }}">{{ page.map.address | replace: ", ", ", <br>" }}</a></address>
 					<h3>Open Hours</h3>
 			<p><a "{{ site.data.company.open_hours }}">{{ site.data.company.open_hours }}</a></p>
-				
 		</div>
 		<div>
 			<h3>Email</h3>
@@ -124,4 +87,3 @@ map:
 	}
 </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key={{ site.google_maps_javascript_api_key }}&amp;callback=initMap"></script>
-
