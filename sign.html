@@ -1,0 +1,38 @@
+---
+title: Sign
+heading: Signwriting
+subtitle: Make your ideas sparkling
+---
+
+<section class="diagonal alternate">
+	<div class="container">
+	  <p>Melcome Ltd was established in 2012, our goal is to build a business reputation based on our outstanding customer service, quality materials and products and fast turnaround times.We have the latest technology and are also skilled in traditional signwriting methods.We are professional in the fields of:</p>
+<ul>
+<li>Outdoor Advertising of banner or pull-up banner, shop sign, window sign, vehicle sign, footpath, light box, signboard, 3D letter.</li>
+<li>Indoor Advertising of pull-up banner, menus, light box, graphics and brochure holders.</li>
+<li>LED Advertising of 3D Letter and Light Box. </li></ul>
+
+<p>We have an in-house graphic designer and a great team of talented and experienced staff to assist our customers to excel their businesses. Our service staff are very effective and profession to have the fast turnaround time to satisfy your needs. We use high quality materials and products to complete our work and we keep our promise to think your way to help you shine your business.</p>
+	</div>
+</section>
+
+<section class="diagonal patterned">
+	<div class="container">
+	    <p class="editor-link" style="text-align: center;"><a href="cloudcannon:collections/_clients/" class="btn"><strong>&#9998;</strong> Manage Clients</a></p>
+		<ul class="image-grid">
+			{% for client in site.clients %}
+				<li>
+					<a href="{{ site.baseurl }}{{ client.url }}">
+						<img src="{% include relative-src.html src=client.image_path %}" alt="{{ person.name }}" />
+						<div class="details">
+							<div class="name">{{ client.name }}</div>
+							<div class="position">{{ client.subtitle }}</div>
+						</div>
+					</a>
+				</li>
+			{% endfor %}
+			<li class="filler"></li>
+			<li class="filler"></li>
+		</ul>
+	</div>
+</section>
