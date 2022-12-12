@@ -1,0 +1,36 @@
+- title: Pages
+  links:
+  - name: Home
+    link: /
+  - name: Design
+    link: /design/
+  - name: Print
+    link: /print/
+  - name: Sign
+    link: /sign/
+  - name: Portfolio
+    link: /portfolio/
+
+  - name: About
+    link: /about/
+  - name: Contact
+    link: /contact/
+   
+- title: Social
+  links:
+    - name: Facebook
+      link: https://facebook.com/supermelcome/
+      social_icon: Facebook
+      new_window: true
+    - name: Twitter
+      link: https://twitter.com/melcome/
+      social_icon: Twitter
+      new_window: true
+    - name: Instagram
+      link: https://instagram.com/melcome
+      social_icon: Instagram
+      new_window: true
+    - name: LinkedIn
+      link: https://nz.linkedin.com/company/melcome
+      social_icon: LinkedIn
+      new_window: true

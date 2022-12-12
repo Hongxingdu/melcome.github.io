@@ -1,0 +1,6 @@
+--- layout: page title: Blog heading: Blog subtitle: Keep up with the latest news. ---
+✎ Add Post
+	•	{% include list-posts.html posts=paginator.posts %} 
+{% if paginator.total_pages > 1 %}
+{% if paginator.previous_page %} ← Newer posts {% endif %} {{ paginator.page }} of {{ paginator.total_pages }} {% if paginator.next_page %} Older posts → {% endif %} 
+{% endif %} 
